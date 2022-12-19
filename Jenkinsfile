@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'jenkins/inbound-agent:alpine'
-        }
+        docker 'jenkins/inbound-agent:alpine'
     }
 
     options {
