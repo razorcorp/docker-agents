@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.3-labs
+
 FROM jenkins/inbound-agent:alpine
 
 USER root
