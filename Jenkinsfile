@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        docker 'jenkins/inbound-agent:alpine'
+        node {
+            label 'generic'
+        }
     }
 
     options {
