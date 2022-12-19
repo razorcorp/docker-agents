@@ -1,9 +1,13 @@
 pipeline {
-    agent none
+    agent {
+        docker {
+            image 'jenkins/inbound-agent:alpine'
+        }
+    }
 
     options {
         timestamps()
-        buildDiscarder(logRotator(numToKeepStr: '1'))
+        buildDiscarder(logRotator(numToKeepStr: '10'))
     }
 
     stages {
