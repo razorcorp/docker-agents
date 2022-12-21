@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'generic'
+            label 'Slave'
         }
     }
 
@@ -35,11 +35,15 @@ pipeline {
     }
 
     // TODO: Add post action Slack alerts
-    //post {
+    post {
     //    success {
     //    }
 
     //    failure {
     //    }
-    //}
+
+        cleanup {
+            deleteDir()
+        }
+    }
 }
